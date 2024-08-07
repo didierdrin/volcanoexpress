@@ -12,13 +12,13 @@ export default function Home() {
             title="PassTrack"
             description="Manage your passwords securely"
             imageSrc="/passtrack-icon.png"
-            apkName="passtrack.apk"
+            apkUrl="https://drive.google.com/file/d/1hj1kXsV4srALkHXmgi1KHLFSQd8Fcwhj/view?usp=drive_link"
           />
           <AppDownloadCard 
             title="Dashboard"
             description="Monitor your performance on-the-go"
             imageSrc="/dashboard-icon.png"
-            apkName="dashboard.apk"
+            apkUrl="https://drive.google.com/file/d/1oVT6bhJOZF-WV8XY9OZ4ODzh2GFfD6V7/view?usp=drive_link"
           />
         </div>
       </div>
@@ -30,20 +30,21 @@ interface AppDownloadCardProps {
   title: string;
   description: string;
   imageSrc: string;
-  apkName: string;
+  apkUrl: string;
 }
 
-function AppDownloadCard({ title, description, imageSrc, apkName }: AppDownloadCardProps) {
+function AppDownloadCard({ title, description, imageSrc, apkUrl }: AppDownloadCardProps) {
   return (
     <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6 w-full md:w-64 flex flex-col items-center">
       <Image src={imageSrc} alt={`${title} icon`} width={80} height={80} className="mb-4" />
       <h2 className="text-2xl font-semibold mb-2">{title}</h2>
       <p className="text-sm mb-4">{description}</p>
-      <a
-        href={`/${apkName}`}
-        download
+      
+        href={apkUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300"
-      >
+      <a>
         Download APK
       </a>
     </div>
