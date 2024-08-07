@@ -10,13 +10,13 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <AppDownloadCard 
             title="PassTrack"
-            description="Manage your passwords securely"
+            description="Get your ticket online & ride safely"
             imageSrc="/passtrack-icon.png"
             apkUrl="https://drive.google.com/file/d/1hj1kXsV4srALkHXmgi1KHLFSQd8Fcwhj/view?usp=drive_link"
           />
           <AppDownloadCard 
             title="Dashboard"
-            description="Monitor your performance on-the-go"
+            description="Monitor buses, route & crowd on-the-go"
             imageSrc="/dashboard-icon.png"
             apkUrl="https://drive.google.com/file/d/1oVT6bhJOZF-WV8XY9OZ4ODzh2GFfD6V7/view?usp=drive_link"
           />
