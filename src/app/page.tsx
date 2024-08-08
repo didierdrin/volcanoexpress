@@ -10,15 +10,15 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <AppDownloadCard 
             title="PassTrack"
-            description="Get your ticket online & ride safely"
+            description={"Get your ticket &amp; ride safely"}
             imageSrc="/passtrack-icon.png"
-            apkUrl="https://drive.google.com/file/d/1hj1kXsV4srALkHXmgi1KHLFSQd8Fcwhj/view?usp=drive_link"
+            apkName="passtrack.apk"
           />
           <AppDownloadCard 
             title="Dashboard"
-            description="Monitor buses, route & crowd on-the-go"
+            description={"Monitor buses, routes &amp; crowd on-the-go"}
             imageSrc="/dashboard-icon.png"
-            apkUrl="https://drive.google.com/file/d/1oVT6bhJOZF-WV8XY9OZ4ODzh2GFfD6V7/view?usp=drive_link"
+            apkName="dashboard.apk"
           />
         </div>
       </div>
@@ -30,21 +30,20 @@ interface AppDownloadCardProps {
   title: string;
   description: string;
   imageSrc: string;
-  apkUrl: string;
+  apkName: string;
 }
 
-function AppDownloadCard({ title, description, imageSrc, apkUrl }: AppDownloadCardProps) {
+function AppDownloadCard({ title, description, imageSrc, apkName }: AppDownloadCardProps) {
   return (
     <div className="bg-white text-gray-800 rounded-lg shadow-lg p-6 w-full md:w-64 flex flex-col items-center">
       <Image src={imageSrc} alt={`${title} icon`} width={80} height={80} className="mb-4" />
       <h2 className="text-2xl font-semibold mb-2">{title}</h2>
       <p className="text-sm mb-4">{description}</p>
-      
-        href={apkUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+      <a
+        href={`/${apkName}`}
+        download
         className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition duration-300"
-      <a>
+      >
         Download APK
       </a>
     </div>
