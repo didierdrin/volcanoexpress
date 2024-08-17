@@ -10,13 +10,13 @@ export default function Home() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <AppDownloadCard 
             title="PassTrack"
-            description={"Get your ticket &amp; ride safely"}
+            description={"Get your ticket ride safely"}
             imageSrc="/passtrack-icon.png"
             apkName="passtrack.apk"
           />
           <AppDownloadCard 
             title="Dashboard"
-            description={"Monitor buses, routes &amp; crowd on-the-go"}
+            description={"Monitor buses, routes crowd on-the-go"}
             imageSrc="/dashboard-icon.png"
             apkName="dashboard.apk"
           />
